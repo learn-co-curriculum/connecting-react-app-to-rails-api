@@ -3,12 +3,12 @@
 ## Objectives
 
 * Connecting a Create React App to the Iron Starter Rails API
-* Review Rack CORS and add Create React App Domain to Allowed Origins
+* Review Rack CORS and add Create React App domain to allowed origins
 * Create list view of Campaigns in the App component
 
 ## Introduction
 
-In this lesson we are going to take our two new tools (Create React App & Rails 5 API Template) and connect them. This will be a bit of review with some new things mixed in. The main goal here is to see how they can connect. 
+In this lesson we are going to try out our two new tools (Create React App & Rails 5 API Template) and connect them. This will be a bit of review with some new things mixed in. The main goal here is to see how they can connect. 
 
 ## App Layout
 
@@ -45,7 +45,7 @@ This should open up the React app in the browser again at localhost:3000
 
 This app will look almost identical to our small JS/HTML app we built a couple of lessons ago. To build it, we first need to clear out the `/client/src/app.js` file and change it to:
 
-```javascript 
+```jsx
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -76,7 +76,7 @@ export default App;
 
 Next let's make a fetch request to test if we can connect to our Rails API. The `fetch` call should live inside of the `componentDidMount()` lifecycle function and log the response. 
 
-```javascript
+```jsx
 // /client/src/app.js
 
 componentDidMount() {
@@ -121,7 +121,7 @@ rails server -p 3001
 
 If we check out the React app in the browser again, there should be an array of Campaigns logged from our Iron Starter API request. Next let's add some code and render these items to the App component.
 
-```javascript 
+```jsx 
 // client/src/App.js
 
 import React, { Component } from 'react';
